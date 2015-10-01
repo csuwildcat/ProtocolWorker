@@ -66,7 +66,7 @@ That's it! Nifty, huh?
 
 ##### *Consuming apps use ProtocolWorkers to connect to providers*
 
-Once you register your web app to handle the service you'd like to provide, other apps can open connections to your service. Let's imagine your app has a button for sharing a a post + picture of your dinner:
+Once you register your web app to handle the service you'd like to provide, other apps can open connections to your service. Let's imagine your app has a button for sharing a post + picture of your dinner:
 
 ```html
 <script>
