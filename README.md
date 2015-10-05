@@ -90,3 +90,16 @@ document.getElementById('share_button').addEventListener('click', function(){
 
 </script>
 ```
+
+### What is awesome about things
+
+Pros
+- Users can associate and connect whatever services they want as providers, and have a better experience performing common app-to-app activities.
+- Developers can code for one channel, API, and flow
+- If widely adopted, eliminates the need for performance-destroying third-party includes on pages across the web.
+- 
+
+
+### Where do we go from here?
+
+The browser support for this is admittedly limited, but this is more about calling attention to the need for an API (set) that fulfills the following requirements
