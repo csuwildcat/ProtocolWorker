@@ -1056,7 +1056,7 @@
     var data = JSON.parse(event.data);
     var transaction = data.__pwtxn__;
     if (transaction) {
-      if (window == window.top && !window.opener) { // this is an indication the script is running in the parent page
+      if (window == window.top) { // this is an indication the script is running in the parent page
         var worker = workers[transaction.worker];
         var transactions = worker.transactions;
         delete data.__pwtxn__;

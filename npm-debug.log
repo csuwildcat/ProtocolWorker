@@ -1,0 +1,137 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'c:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'c:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'grunt-cli' ]
+2 info using npm@2.14.3
+3 info using node@v0.10.24
+4 verbose install initial load of c:\Program Files\nodejs\package.json
+5 verbose readDependencies loading dependencies from c:\Program Files\nodejs\package.json
+6 silly cache add args [ 'grunt-cli', null ]
+7 verbose cache add spec grunt-cli
+8 silly cache add parsed spec { raw: 'grunt-cli',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'grunt-cli',
+8 silly cache add   rawSpec: '',
+8 silly cache add   spec: '*',
+8 silly cache add   type: 'range' }
+9 silly addNamed grunt-cli@*
+10 verbose addNamed "*" is a valid semver range for grunt-cli
+11 silly addNameRange { name: 'grunt-cli', range: '*', hasData: false }
+12 silly mapToRegistry name grunt-cli
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry uri https://registry.npmjs.org/grunt-cli
+16 verbose addNameRange registry:https://registry.npmjs.org/grunt-cli not in flight; fetching
+17 verbose request uri https://registry.npmjs.org/grunt-cli
+18 verbose request no auth needed
+19 info attempt registry request try #1 at 13:48:38
+20 verbose request using bearer token for auth
+21 verbose request id e8f0610aa6f1b10f
+22 verbose etag "2CAHK3Q2AC2FWHJAN98LPSCUC"
+23 http request GET https://registry.npmjs.org/grunt-cli
+24 http 200 https://registry.npmjs.org/grunt-cli
+25 silly get cb [ 200,
+25 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+25 silly get     etag: '"16RX9R8VVCSRLVQGRNORB4OYM"',
+25 silly get     'content-type': 'application/json',
+25 silly get     'cache-control': 'max-age=60',
+25 silly get     'content-length': '21631',
+25 silly get     'accept-ranges': 'bytes',
+25 silly get     date: 'Mon, 12 Oct 2015 20:48:38 GMT',
+25 silly get     via: '1.1 varnish',
+25 silly get     connection: 'keep-alive',
+25 silly get     'x-served-by': 'cache-lax1426-LAX',
+25 silly get     'x-cache': 'MISS',
+25 silly get     'x-cache-hits': '0',
+25 silly get     'x-timer': 'S1444682918.822965,VS0,VE160',
+25 silly get     vary: 'Accept' } ]
+26 verbose get saving grunt-cli to C:\Users\csuwildcat\AppData\Roaming\npm-cache\registry.npmjs.org\grunt-cli\.cache.json
+27 silly addNameRange number 2 { name: 'grunt-cli', range: '*', hasData: true }
+28 silly addNameRange versions [ 'grunt-cli',
+28 silly addNameRange   [ '0.1.0',
+28 silly addNameRange     '0.1.1',
+28 silly addNameRange     '0.1.2',
+28 silly addNameRange     '0.1.3',
+28 silly addNameRange     '0.1.4',
+28 silly addNameRange     '0.1.5',
+28 silly addNameRange     '0.1.6',
+28 silly addNameRange     '0.1.7',
+28 silly addNameRange     '0.1.8',
+28 silly addNameRange     '0.1.9',
+28 silly addNameRange     '0.1.10',
+28 silly addNameRange     '0.1.11',
+28 silly addNameRange     '0.1.12',
+28 silly addNameRange     '0.1.13' ] ]
+29 silly addNamed grunt-cli@0.1.13
+30 verbose addNamed "0.1.13" is a plain semver version for grunt-cli
+31 silly cache afterAdd grunt-cli@0.1.13
+32 verbose afterAdd C:\Users\csuwildcat\AppData\Roaming\npm-cache\grunt-cli\0.1.13\package\package.json not in flight; writing
+33 verbose afterAdd C:\Users\csuwildcat\AppData\Roaming\npm-cache\grunt-cli\0.1.13\package\package.json written
+34 silly install resolved [ { name: 'grunt-cli',
+34 silly install resolved     description: 'The grunt command line interface.',
+34 silly install resolved     version: '0.1.13',
+34 silly install resolved     author: { name: 'Grunt Team' },
+34 silly install resolved     homepage: 'http://gruntjs.com/',
+34 silly install resolved     repository: { type: 'git', url: 'git://github.com/gruntjs/grunt-cli.git' },
+34 silly install resolved     bugs: { url: 'http://github.com/gruntjs/grunt-cli/issues' },
+34 silly install resolved     licenses: [ [Object] ],
+34 silly install resolved     bin: { grunt: 'bin/grunt' },
+34 silly install resolved     engines: { node: '>= 0.8.0' },
+34 silly install resolved     scripts: { test: 'node bin/grunt test' },
+34 silly install resolved     preferGlobal: true,
+34 silly install resolved     dependencies: { nopt: '~1.0.10', 'findup-sync': '~0.1.0', resolve: '~0.3.1' },
+34 silly install resolved     devDependencies: { grunt: '~0.4.0', 'grunt-contrib-jshint': '~0.2.0' },
+34 silly install resolved     contributors: [ [Object], [Object], [Object], [Object] ],
+34 silly install resolved     readme: '# grunt-cli [![Build Status](https://secure.travis-ci.org/gruntjs/grunt-cli.png?branch=master)](http://travis-ci.org/gruntjs/grunt-cli)\n> The Grunt command line interface.\n\nInstall this globally and you\'ll have access to the `grunt` command anywhere on your system.\n\n```shell\nnpm install -g grunt-cli\n```\n\n**Note:** The job of the `grunt` command is to load and run the version of Grunt you have installed locally to your project, irrespective of its version.  Starting with Grunt v0.4, you should never install Grunt itself globally.  For more information about why, [please read this](http://blog.nodejs.org/2011/03/23/npm-1-0-global-vs-local-installation).\n\nSee the [Getting Started](http://gruntjs.com/getting-started) guide for more information.\n\n## Shell tab auto-completion\nTo enable tab auto-completion for Grunt, add one of the following lines to your `~/.bashrc` or `~/.zshrc` file.\n\n```bash\n# Bash, ~/.bashrc\neval "$(grunt --completion=bash)"\n```\n\n```bash\n# Zsh, ~/.zshrc\neval "$(grunt --completion=zsh)"\n```\n\n## Installing grunt-cli locally\nIf you prefer the idiomatic Node.js method to get started with a project (`npm install && npm test`) then install grunt-cli locally with `npm install grunt-cli --save-dev`. Then add a script to your `package.json` to run the associated grunt command: `"scripts": { "test": "grunt test" } `. Now `npm test` will use the locally installed `./node_modules/.bin/grunt` executable to run your Grunt commands.\n\nTo read more about npm scripts, please visit the npm docs: [https://npmjs.org/doc/misc/npm-scripts.html](https://npmjs.org/doc/misc/npm-scripts.html).\n',
+34 silly install resolved     readmeFilename: 'README.md',
+34 silly install resolved     _id: 'grunt-cli@0.1.13',
+34 silly install resolved     _from: 'grunt-cli@*' } ]
+35 info install grunt-cli@0.1.13 into c:\Program Files\nodejs
+36 info installOne grunt-cli@0.1.13
+37 verbose installOne of grunt-cli to c:\Program Files\nodejs not in flight; installing
+38 verbose lock using C:\Users\csuwildcat\AppData\Roaming\npm-cache\_locks\grunt-cli-bba60cbe1cc84b66.lock for c:\Program Files\nodejs\node_modules\grunt-cli
+39 silly install write writing grunt-cli 0.1.13 to c:\Program Files\nodejs\node_modules\grunt-cli
+40 verbose unbuild node_modules\grunt-cli
+41 silly gentlyRm c:\Program Files\nodejs\node_modules\grunt-cli is being purged from base c:\Program Files\nodejs
+42 verbose gentlyRm don't care about contents; nuking c:\Program Files\nodejs\node_modules\grunt-cli
+43 verbose tar unpack C:\Users\csuwildcat\AppData\Roaming\npm-cache\grunt-cli\0.1.13\package.tgz
+44 verbose tar unpacking to c:\Program Files\nodejs\node_modules\grunt-cli
+45 silly gentlyRm c:\Program Files\nodejs\node_modules\grunt-cli is being purged
+46 verbose gentlyRm don't care about contents; nuking c:\Program Files\nodejs\node_modules\grunt-cli
+47 silly gunzTarPerm modes [ '777', '666' ]
+48 error tar.unpack untar error C:\Users\csuwildcat\AppData\Roaming\npm-cache\grunt-cli\0.1.13\package.tgz
+49 verbose unlock done using C:\Users\csuwildcat\AppData\Roaming\npm-cache\_locks\grunt-cli-bba60cbe1cc84b66.lock for c:\Program Files\nodejs\node_modules\grunt-cli
+50 verbose fstream_path c:\Program Files\nodejs\node_modules\grunt-cli
+51 verbose fstream_type Directory
+52 verbose fstream_class DirWriter
+53 verbose stack Error: EPERM, mkdir 'c:\Program Files\nodejs\node_modules\grunt-cli'
+54 verbose fstream_stack c:\Program Files\nodejs\node_modules\npm\node_modules\fstream\lib\dir-writer.js:35:25
+54 verbose fstream_stack c:\Program Files\nodejs\node_modules\npm\node_modules\mkdirp\index.js:47:53
+54 verbose fstream_stack Object.oncomplete (fs.js:107:15)
+55 verbose cwd C:\Users\csuwildcat\repos\protocol-worker
+56 error Windows_NT 6.2.9200
+57 error argv "c:\\Program Files\\nodejs\\node.exe" "c:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "-g" "grunt-cli"
+58 error node v0.10.24
+59 error npm  v2.14.3
+60 error path c:\Program Files\nodejs\node_modules\grunt-cli
+61 error code EPERM
+62 error errno 50
+63 error Error: EPERM, mkdir 'c:\Program Files\nodejs\node_modules\grunt-cli'
+63 error  { [Error: EPERM, mkdir 'c:\Program Files\nodejs\node_modules\grunt-cli']
+63 error   errno: 50,
+63 error   code: 'EPERM',
+63 error   path: 'c:\\Program Files\\nodejs\\node_modules\\grunt-cli',
+63 error   fstream_type: 'Directory',
+63 error   fstream_path: 'c:\\Program Files\\nodejs\\node_modules\\grunt-cli',
+63 error   fstream_class: 'DirWriter',
+63 error   fstream_stack:
+63 error    [ 'c:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\fstream\\lib\\dir-writer.js:35:25',
+63 error      'c:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\mkdirp\\index.js:47:53',
+63 error      'Object.oncomplete (fs.js:107:15)' ] }
+64 error Please try running this command again as root/Administrator.
+65 verbose exit [ 50, true ]
+66 verbose unbuild node_modules\grunt-cli
+67 silly gentlyRm c:\Program Files\nodejs\node_modules\grunt-cli is being purged from base c:\Program Files\nodejs
+68 verbose gentlyRm don't care about contents; nuking c:\Program Files\nodejs\node_modules\grunt-cli
