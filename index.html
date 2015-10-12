@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Web Profile - Consuming Site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+
+      #retrieve {
+        margin-left: 1em;
+      }
+
+    </style>
+</head>
+
+<body>
+
+<input placeholder="Whisper something" /><button id="send">Send</button><button id="retrieve">Retrieve</button>
+</body>
+
+<script src="dist/build.js"></script>
+
+<script>
+
+var retrieveButton = document.querySelector('#retrieve');
+var sendButton = document.querySelector('#send');
+var input = document.querySelector('input');
+
+var whisperWorker = new ProtocolWorker('web+whisper');
+
+sendButton.addEventListener('click', function(){
+
+  var value = input.value.trim();
+  if (value) {
+    whisperWorker.request({
+      '@context': 'http://schema.org',
+      '@type': 'Comment',
+      comment: value
+    }).then(function(){
+      alert('Your message has been whispered to your provider!')
+    }).catch(function(){
+      alert('You either declined to whisper something to me or don\'t have a web+whisper provider :/')
+    });
+  }
+  else alert('You didn\'t whisper anything.');
+
+});
+
+retrieveButton.addEventListener('click', function(){
+
+  whisperWorker.request({
+    '@context': 'http://schema.org',
+    '@type': 'Search'
+  }).then(function(data){
+    alert('You last whispered: ' + data);
+  }).catch(function(){
+    alert('You either decided not to let this app see your last whisper, or don\'t have a web+whisper provider :/')
+  });
+
+});
+
+</script>
+
+</html>
